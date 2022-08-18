@@ -1,0 +1,22 @@
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+{% for card in self.cards %}
+<div class="row text-center cc-title-block">
+    <div class="col">
+        <h3 class="cc-title-title mb-0">
+            {{ card.title }} - {{ card.text }}
+            {% image card.image fill-570x300 as card_img %}
+        </h3>
+        <img src="{{ card_img.url }}" alt="{{ card_img.alt }}">
+
+        {% if card.text %}
+        <p>{{ card.text }}</p>
+        {% endif %}
+
+        <!--        <a href="{% firstof card.link.internal_page card.link.external_link  %}">{{ card.link.link_text }}</a>-->
+        {% if card.link.url %}
+        <a href="{{ card.link.url }}">{{ card.link.link_text }}</a>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}

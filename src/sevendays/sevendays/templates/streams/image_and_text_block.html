@@ -1,0 +1,6 @@
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+<h3>Image Aligning:</h3>
+{% image self.image fill-768x552 as img %}
+<img src="{{ img.url }}" alt="{{ img.alt }}" style="width:100%; height:auto; valign:{{ value.image_alignment }};">
+<a href="{{ self.link.url }}">{{ self.title }} - {{ self.text }} - {{ self.link.link_text }}</a>

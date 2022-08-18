@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static wagtailimages_tags wagtailcore_tags %}
+
+{% block body_class %}template-generic-page{% endblock %}
+
+{% block extra_css %}
+
+{% comment %}
+Delete the line below if you're just getting started and want to remove the welcome screen!
+{% endcomment %}
+<link rel="stylesheet" href="{% static 'css/welcome_page.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+    <h1> Hello Generic </h1>
+    <h3>{{ page.banner_title }}</h3>
+    <h4>{{ page.introduction }}</h3>
+
+    {% image page.banner_image fill-1400x300 as img %}
+
+    <img src="{{ img.url }}" alt="{{ img.alt }}"/>
+
+    by {{ page.author }}
+    <p>
+    {% image page.author.image fill-100x100 %}
+    </p>
+    <hr>
+    {% include_block page.body %}
+{% endblock content %}
