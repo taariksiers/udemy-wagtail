@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "wagtail.contrib.modeladmin",
     "wagtail.contrib.redirects",
     "wagtail.contrib.settings",
+    "wagtail.contrib.table_block",
     "wagtail.embeds",
     "wagtail.sites",
     "wagtail.users",

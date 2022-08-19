@@ -3,6 +3,7 @@ from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel, StreamFiel
 from wagtail.core.fields import StreamField
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.models import Page
+from wagtail.snippets.blocks import SnippetChooserBlock
 
 from streams import blocks
 
@@ -38,6 +39,11 @@ class HomePage(Page):
         ("cards", blocks.CardsBlock()),
         ("image_and_text", blocks.ImageAndTextBlock()),
         ("cta", blocks.CallToActionBlock()),
+        ("testimonials", SnippetChooserBlock(
+            target_model="testimonials.Testimonial",
+            template="streams/testimonial_block.html")
+         ),
+        ("pricing_table", blocks.PricingTableBlock()),
     ], null=True, blank=True)
     # blank=True you can save the homepage without any input for this
     # null=True - allowed by DB

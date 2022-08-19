@@ -34,3 +34,12 @@ Work:
 src/sevendays/streams/blocks.py
 src/sevendays/home/models.py
 ```
+
+# Lecture 530
+Call to Action
+
+# Lecture 531
+Testimonials and Snippets
+
+# Lecture 532
+Table Streamfield
