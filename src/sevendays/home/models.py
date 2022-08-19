@@ -37,6 +37,7 @@ class HomePage(Page):
         ("title", blocks.TitleBlock()),
         ("cards", blocks.CardsBlock()),
         ("image_and_text", blocks.ImageAndTextBlock()),
+        ("cta", blocks.CallToActionBlock()),
     ], null=True, blank=True)
     # blank=True you can save the homepage without any input for this
     # null=True - allowed by DB
