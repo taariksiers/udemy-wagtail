@@ -110,3 +110,15 @@ class PricingTableBlock(TableBlock):
         label = "Pricing Table"
         icon = "table"
         help_text = "Pricing Table should have 4 columns."
+
+
+class RichTextWithTitleBlock(blocks.StructBlock):
+
+    title = blocks.CharBlock(max_length=50)
+    context = blocks.RichTextBlock(features=[])
+
+    class Meta:
+        template = "streams/simple_richtext_block.html"
+        label = "Rich Text Title Block"
+        icon = "title"
+        help_text = "Rich text for title block"

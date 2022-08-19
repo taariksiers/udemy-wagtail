@@ -25,7 +25,7 @@ cd src/sevendays
 ./manage.py runserver 127.0.0.1:8000
 ```
 
-# 527 - 529
+## 527 - 529
 Custom StreamField Logic
 Image and Text Block
 Radio Block
@@ -35,11 +35,19 @@ src/sevendays/streams/blocks.py
 src/sevendays/home/models.py
 ```
 
-# Lecture 530
+## Lecture 530
 Call to Action
 
-# Lecture 531
+## Lecture 531
 Testimonials and Snippets
 
-# Lecture 532
+## Lecture 532
 Table Streamfield
+
+## Lecture 533
+RichText StreamField
+
+```bash
+./manage.py makemigrations flex
+./manage.py migrate
+```
